@@ -1,0 +1,42 @@
+<div class="gallery-container">
+
+    <div class="main-heading text-center mb-3">
+        <h1 >
+            Gallery
+        </h1>
+
+    </div>
+    <div class="gallery">
+        <div class="gallery-img" *ngFor="let data of images; let i=index" (contextmenu)="onContextMenu($event)">
+            <img [src]="data.imageSrc" [alt]="data.imageAlt" (click)="previewImage(i)">
+        </div>
+    </div>
+
+    <div class="lightbox" *ngIf="showMask" animation2>
+
+        <span class="count" *ngIf="showCount">
+            {{currentIndex + 1}}/{{totalImageCount}}
+        </span>
+
+        <button class="close-button" *ngIf="imagePreview" (click)="closePreviewImage()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+
+        <button class="btn-image-carousel btn-prev" *ngIf="controls" (click)="previous()">
+            <i class="fa fa-arrow-circle-left icon-carousel icon-prev" aria-hidden="true"></i>
+        </button>
+
+        <button class="btn-image-carousel btn-next" *ngIf="controls" (click)="next()">
+            <i class="fa fa-arrow-circle-right icon-carousel icon-next" aria-hidden="true"></i>
+        </button>
+
+        <div class="lightbox-img" 
+            *ngIf="imagePreview" 
+            [@animation]="{value: 'visible'}"
+            (@animation.done)="onAnimationEnd($event)" 
+            (contextmenu)="onContextMenu($event)">
+
+            <img [src]="currentCarouselImage.imageSrc"  [alt]="currentCarouselImage.imageAlt" >
+        </div>
+    </div>
+</div>

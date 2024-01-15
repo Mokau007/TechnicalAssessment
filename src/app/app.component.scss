@@ -1,0 +1,162 @@
+@import url("https://www.fontspace.com/queensides-font-f90306");
+
+@import url("https://www.fontspace.com/monainn-font-f102256");
+
+
+:host{
+    width: 100vw;
+    height: 100vh ; 
+    background-color:#3B3C36  ;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'queensides';
+}
+
+.btnToggle {
+	border: none ;
+}
+
+/* Navbar Styles */
+.navbar {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-item a{
+    font-weight: bold;
+    color: #3B3C36;
+    font-family: 'queensides';
+    font-size: large;
+}
+
+
+
+.navbar .icon-bar {
+	display: block;
+    background-color:  	#51007e;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+}
+
+
+/* top line needs a little padding */
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+/**
+ * Animate collapse into X.
+ */
+
+/* top line rotates 45 degrees clockwise and moves up and in a bit to close the center of the X in the center of the button */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+/* center line goes transparent */
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+/* bottom line rotates 45 degrees counter clockwise, in, and down a bit to close the center of the X in the center of the button  */
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg) ;
+}
+
+
+/**
+ * Animate collapse open into hamburger menu
+ */
+
+/* top line moves back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+/* middle line goes back to regular color and opacity */
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+/* bottom line goes back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.small-logo{
+    display: none;
+}
+
+.footer-container{
+   background-color: #EC7C26;
+   min-height: 30px;
+   
+
+    .footer-links{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+        column-count: 3;
+        column-gap: 30px;
+
+        a{
+            font-weight: bold;
+            color: #3B3C36;
+            font-family: 'queensides';
+            font-size: large;
+        }
+
+        :hover{
+            text-decoration: none;;
+        }
+
+       
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .footer-links{
+        column-count: 3;
+    
+    }
+        
+}
+
+@media screen and (max-width: 800px){
+    .footer-links{
+        column-count: 2;
+    }
+        
+}
+
+@media screen and (max-width: 650px){
+    .small-logo{
+        display: block;
+        object-fit: contain;
+    }
+
+    .big-logo{
+        display: none;
+    }
+
+    .footer-links{
+        column-count: 1;
+        display: flex;
+        flex-direction: column;
+
+        a{
+            padding-bottom: 7px;
+        }
+    }
+        
+}

@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+@import url("https://www.fontspace.com/queensides-font-f90306");
+
+
+
+.main-heading h1{
+    font-family: 'queensides';
+    color: #EC7C26;
+    font-size: 60px;
+    font-weight: 900;
+}

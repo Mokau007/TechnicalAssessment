@@ -1,0 +1,66 @@
+
+@import url("https://www.fontspace.com/monainn-font-f102256");
+
+@import url("https://www.fontspace.com/queensides-font-f90306");
+
+
+
+.main-heading h1{
+    font-family: 'queensides';
+    color: #EC7C26;
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.content-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadIn 1.7s normal ;
+}
+
+@keyframes fadIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.content-text p{
+    font-family: 'monainn';
+    color: white ;
+    font-size: 20px;
+    width: 70%;
+   
+}
+
+// .carousel-wrapper{
+//     height: auto;
+// }
+
+.carousel-wrapper img{
+    height: 80vh;
+    width: 100%;
+    object-fit: contain;
+    
+}
+
+.carousel-control-prev-icon{
+    
+    background-image: url(../../assets/images/icons8-previous-64.png);
+    
+}
+
+.carousel-indicators button{
+    background-color:#EC7C26 !important ;
+}
+
+
+
+
+
+
+
