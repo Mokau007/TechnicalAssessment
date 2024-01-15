@@ -67,9 +67,7 @@ export class GalleryComponent implements OnInit {
 
     this.currentCarouselImage =  this.images[index]
 
-    // this.intervalId = setInterval(() => {
-    //   this.next();
-    // }, 5000); 
+    
   }
 
   onAnimationEnd(event:AnimationEvent) {
@@ -82,8 +80,6 @@ export class GalleryComponent implements OnInit {
 
   closePreviewImage(){
     this.imagePreview = false;
-
-    // clearInterval(this.intervalId);
     
   }
 
@@ -107,6 +103,7 @@ export class GalleryComponent implements OnInit {
     this.currentCarouselImage = this.images[this.currentIndex]
   }
 
+  //Disables the right click event so users cannot download images
   onContextMenu(event: Event): void {
     event.preventDefault();
   }

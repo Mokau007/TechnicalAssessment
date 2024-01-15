@@ -7,7 +7,7 @@
 
     </div>
     <div class="gallery">
-        <div class="gallery-img" *ngFor="let data of images; let i=index" (contextmenu)="onContextMenu($event)">
+        <div class="gallery-img noprint" *ngFor="let data of images; let i=index" (contextmenu)="onContextMenu($event)">
             <img [src]="data.imageSrc" [alt]="data.imageAlt" (click)="previewImage(i)">
         </div>
     </div>

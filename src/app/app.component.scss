@@ -100,6 +100,7 @@ h1, h2, h3, h4, h5{
 .footer-container{
    background-color: #EC7C26;
    min-height: 30px;
+   font-family: 'queensides';
    
 
     .footer-links{
@@ -114,6 +115,10 @@ h1, h2, h3, h4, h5{
             color: #3B3C36;
             font-family: 'queensides';
             font-size: large;
+        }
+
+        .logo img{
+            border-radius: .35rem;
         }
 
         :hover{

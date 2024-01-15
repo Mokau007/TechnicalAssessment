@@ -23,26 +23,9 @@ export class AppComponent implements OnInit{
   
   title = 'virtual-visage';
 
+  //Disables the right click event so users cannot download images
   onContextMenu(event: Event): void {
     event.preventDefault();
-  }
-
-  private lastScrollPosition = 0;
-  hideNavbar = false;
-
-  @HostListener('window:scroll', ['$event'])
-  handleScroll(event: Event): void {
-    const currentScrollPosition = window.scrollY ;
-
-    if (currentScrollPosition > this.lastScrollPosition) {
-      // Scrolling down
-      this.hideNavbar = false;
-    } else {
-      // Scrolling up
-      this.hideNavbar = true;
-    }
-
-    this.lastScrollPosition = currentScrollPosition;
   }
 
   

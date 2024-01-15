@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light py-lg-0" role="navigation" [class.sticky]="hideNavbar" id="navigationBar">
+<nav class="navbar navbar-expand-md navbar-light bg-light py-lg-0" role="navigation" id="virtual-visage">
   <div class="container">
     
     
@@ -54,22 +54,28 @@
   
    <div class="footer-links py-3">
 
-      <a class="logo" href="#navigationBar">
+      <a class="logo rounded-circle" href="#virtual-visage" (contextmenu)="onContextMenu($event)">
 
-        <img  src="../assets/images/logo2.png" style="mix-blend-mode: multiply;"  width="70" height="60" alt="">
+        <img  src="../assets/images/logo2.png"   width="70" height="60" alt="">
 
         
 
       </a>      
 
-      
       <a href="#gallery" >
         Gallery
       </a>
 
-      <a href="#navigationBar">
+      <a href="#virtual-visage">
         Back to Top
       </a>
+   </div>
+
+   <div class="container border-top border-dark">
+      Copyright &copy;
+      All rights reserved | Powered by 
+      Virtual Visage
+  
    </div>
 
 </footer>
