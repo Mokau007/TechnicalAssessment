@@ -3,7 +3,9 @@
 
 @import url("https://www.fontspace.com/queensides-font-f90306");
 
-
+.row{
+    background-color:#3B3C36  ;
+}
 
 .main-heading h1{
     font-family: 'queensides';
@@ -19,6 +21,25 @@
     animation: fadIn 1.7s normal ;
 }
 
+
+.content-text p{
+    font-family: 'monainn';
+    color: white ;
+    font-size: 18px;
+    width: 70%;
+   
+}
+
+//Can't select and copy the text
+.unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+  }
+
 @keyframes fadIn {
     from {
         transform: translateX(100%);
@@ -29,34 +50,10 @@
         opacity: 1;
     }
 }
-.content-text p{
-    font-family: 'monainn';
-    color: white ;
-    font-size: 20px;
-    width: 70%;
-   
-}
 
-// .carousel-wrapper{
-//     height: auto;
-// }
 
-.carousel-wrapper img{
-    height: 80vh;
-    width: 100%;
-    object-fit: contain;
-    
-}
 
-.carousel-control-prev-icon{
-    
-    background-image: url(../../assets/images/icons8-previous-64.png);
-    
-}
 
-.carousel-indicators button{
-    background-color:#EC7C26 !important ;
-}
 
 
 
